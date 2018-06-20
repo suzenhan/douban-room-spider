@@ -145,7 +145,7 @@ def send_room_mail(room_url, room_title):
 def monitor_rooms():
     while True:
         new_rooms = get_new_rooms()
-        for url, title in list(new_rooms)[:1]:
+        for url, title in new_rooms:
             send_room_mail(url, title)
             time.sleep(5)
         time.sleep(60 * random.randint(10, 30))

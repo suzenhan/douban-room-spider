@@ -9,5 +9,19 @@
 ## 安装
 pip3 install -r requirement.txt
 
+## 邮件配置
+
+```
+# config.py文件
+
+mail = {
+    'sender': 'xxx@163.com',
+    'host': 'smtp.163.com',
+    'receivers': ['xxx@163.com'],
+    'password': 'password',
+    'subject_prefix': '豆瓣爬虫租房'
+}
+```
+
 ## 运行
 python3 main.py
