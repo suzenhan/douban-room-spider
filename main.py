@@ -85,9 +85,11 @@ class Diff(object):
         if not self.old_dicts:
             return
         old_titles = list(set(self.old_dicts.values()))
+        added_titles = []
         for url, title in self.new_dicts.items():
             # 根据字符串相似度来选出新帖子
-            if not difflib.get_close_matches(title, old_titles, cutoff=0.8):
+            if not difflib.get_close_matches(title, old_titles + added_titles, cutoff=0.6):
+                added_titles.append(title)
                 yield url, title
 
     def _load_old_items_from_disk(self):
