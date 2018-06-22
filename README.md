@@ -11,7 +11,7 @@ pip3 install -r requirement.txt
 
 ## config.py配置
 
-```
+```py
 
 mail = {
     'sender': 'xxx@163.com',
