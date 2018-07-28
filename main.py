@@ -112,7 +112,7 @@ def get_all_group_rooms():
             for url, title in room_list:
                 if not any([x in title for x in exclude_words]):
                     yield url, title
-            time.sleep(5)
+            time.sleep(random.randint(10, 30))
 
 
 def get_new_rooms():

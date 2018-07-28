@@ -39,4 +39,8 @@ exclude_words = ('求租')
 ```
 
 ## 运行
-python3 main.py
+需要在后台一直运行，每半小时爬取一次，爬取到新房源有邮件提醒
+
+```
+nohup python3 main.py &>> /tmp/douban_spider.log
+```
